@@ -2,7 +2,7 @@
     <div>
         <h1>Kebab de Syrie</h1>
         <TodoInputText />
-        <TodoListItem />
+        <TodoListItem :bouf="bouf" />
     </div>
 </template>
 
@@ -17,13 +17,11 @@ components: {
   },
   data() {
     return {
-      todos: ["Salades", "Tomates", "Oignons"]
+      bouf: ["Salades", "Tomates", "Oignons"]
     };
   }
 };
-
 </script>
 
 <style>
-
 </style>
