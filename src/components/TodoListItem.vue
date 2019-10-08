@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li v-for="eat in bouf">{{ eat }}</li>
+    <li v-for="eat in bouf" :key="eat">{{ eat }}</li>
   </ul>
 </template>
 
