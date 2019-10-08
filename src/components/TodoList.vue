@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Kebab de Syrie</h1>
-    <TodoInputText />
+    <TodoInputText v-model="newEatText" />
     <TodoListItem :bouf="bouf" />
   </div>
 </template>
@@ -17,6 +17,7 @@ export default {
   },
   data() {
     return {
+      newEatText: "eat",
       bouf: ["Salades", "Tomates", "Oignons"]
     };
   }
