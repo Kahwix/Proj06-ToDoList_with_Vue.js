@@ -6,10 +6,9 @@
 
 <script>
 export default {
-    props: ["bouf"]
-}
+  props: ["bouf"]
+};
 </script>
 
 <style>
-
 </style>
