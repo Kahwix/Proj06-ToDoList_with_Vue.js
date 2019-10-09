@@ -17,16 +17,16 @@ export default {
   },
   data() {
     return {
-      newEatText: "eat",
+      newEatText: "",
       bouf: ["Salades", "Tomates", "Oignons"]
     };
   },
   methods: {
     addTodo() {
-      const trimmedText = this.newTodoText.trim();
+      const trimmedText = this.newEatText.trim();
       if (trimmedText) {
-        this.todos.push(trimmedText);
-        this.newTodoText = "";
+        this.bouf.push(trimmedText);
+        this.newEatText = "";
       }
     }
   }
