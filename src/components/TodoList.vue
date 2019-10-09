@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Kebab de Syrie</h1>
-    <TodoInputText v-model="newEatText" />
+    <TodoInputText v-model="newEatText" @keydown.enter="addTodo" />
     <TodoListItem :bouf="bouf" />
   </div>
 </template>
@@ -20,6 +20,15 @@ export default {
       newEatText: "eat",
       bouf: ["Salades", "Tomates", "Oignons"]
     };
+  },
+  methods: {
+    addTodo() {
+      const trimmedText = this.newTodoText.trim();
+      if (trimmedText) {
+        this.todos.push(trimmedText);
+        this.newTodoText = "";
+      }
+    }
   }
 };
 </script>
